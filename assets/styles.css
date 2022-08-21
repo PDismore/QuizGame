@@ -1,0 +1,28 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: dimgrey;
+}
+
+.outer-div{
+padding: 10px;
+}
+
+.top-bar {
+background-color:crimson;
+color: white;
+margin-top: 10px;
+}
+.top-bar button, p{
+    background-color: black;
+    color: white;
+}
+
+.top-bar p{
+    float: right;
+}
