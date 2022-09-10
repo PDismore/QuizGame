@@ -6,7 +6,7 @@
     box-sizing: border-box;
 
     /* debug */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body{
@@ -74,24 +74,25 @@ margin-bottom: 10px;
 }
 
 .quiz-intro button {
-    display: block;
+    /* display: block; */
     margin: auto;
     
 }
 /* Main Quiz Content Styles*/
-main {
-    display:none;
-}
+/* main {
+    display:block;
+} */
 
 
 /* Question Window*/
 .question-window{
-    display: none;
+    display: block;
+    background-color: aqua;
 }
 
 /* End Window */
 .quiz-end-window{
-    display: none;
+    display: block;
 }
 
 
@@ -106,6 +107,9 @@ main {
     max-height: 150px;
 }
 
-.hide{
-    display: none;
+.hide {
+    display:none;
+}
+.show{
+    display: block;
 }

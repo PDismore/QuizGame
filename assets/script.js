@@ -1,16 +1,20 @@
-var startButton = document.getElementById('start-button')
+var startButton = document.getElementById('start-button');
+var startWindow = document.getElementById('start-window');
+var quizContents = document.getElementById('quiz-content')
 var questionContainer = document.getElementById('question-window')
 
 startButton.addEventListener('click', startGame);
 
 
+
 function startGame(){
-var displaySetting = document.getElementById('start-button')
-if(displaySetting=="block"){
-    startButton.style.display='none';
-}
-// document.getElementById('start-button').style.dispaly='none';
-console.log('started');
+
+    console.log('started');
+    startWindow.classList.add('hide');
+    quizContents, questionContainer.classList.add('show');
+    console.log(questionContainer)
+
+
 }
 
 function nextQuestion(){

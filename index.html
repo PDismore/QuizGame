@@ -16,7 +16,7 @@
             <p class="">Time Remaining:</p>
         </div>
         <!-- Inner div -->
-        <div class="inner-div">
+        <div class="inner-div" id="start-window">
             <header class="quiz-intro">
                 <h1>Welcome to QuizGames!</h1>
                 <p>To get started please click Start Quiz!</p>
@@ -24,8 +24,8 @@
             </header>
             
             <!-- Quiz Content -->
-            <main>
-                <section class="question-window">
+            <main class="quiz-content hide" id="quiz-content">
+                <section class="question-window hide" id="question-window">
                     <h2>Question</h2>
                     <Ul>
                         <!-- Replaced by JS -->
@@ -37,7 +37,7 @@
                     
                 </section>
                 <!-- End of Quiz/ highscores -->
-                <section class="quiz-end-window">
+                <section class="quiz-end-window hide">
                     <h2>Fin</h2>
                     <p>Your score is </p>
                     <div>
@@ -47,7 +47,7 @@
                     </div>
                 </section>
                 
-                <section class="highscores-window">
+                <section class="highscores-window hide">
                     <h2>Highscores</h2>
                     <ol>
                         <!-- Replaced by JS -->
