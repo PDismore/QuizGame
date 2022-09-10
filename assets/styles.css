@@ -9,14 +9,19 @@
     border: 1px solid red;
 }
 
-
-
 body{
     background-color: dimgrey;
     overflow: hidden;
 }
 p {
     color: white;
+}
+h1,h2 {
+    text-align: center;
+}
+
+li {
+    list-style: none;
 }
 /* Outer div styles */
 .outer-div{
@@ -40,7 +45,6 @@ margin-bottom: 10px;
 
 .top-bar p{
     float: right;
-
     background-color: black;
 
 }
@@ -54,13 +58,42 @@ margin-bottom: 10px;
     margin:0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     
-}
-.inner-div h1{
-    align-content: center;
+    
 }
 
 /* Header/ Intro Styles*/
 
+.quiz-intro, main {
+    display: block;
+    margin-top: 20vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(236, 236, 13);
+}
+
+.quiz-intro button {
+    display: block;
+    margin: auto;
+    
+}
 /* Main Quiz Content Styles*/
+main {
+    display:none;
+}
+
+
+/* Question Window*/
+.question-window{
+    display: none;
+}
+
+/* End Window */
+.quiz-end-window{
+    display: none;
+}
+
+
+/* High Scores */
+
