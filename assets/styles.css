@@ -1,28 +1,66 @@
+/* Global */
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 
+    /* debug */
+    border: 1px solid red;
 }
+
+
 
 body{
     background-color: dimgrey;
+    overflow: hidden;
 }
-
+p {
+    color: white;
+}
+/* Outer div styles */
 .outer-div{
 padding: 10px;
+height: 100vh;
+display:flex;
+flex-direction: column;
+justify-content: start;
 }
-
+/* Top Bar Styles */
 .top-bar {
 background-color:crimson;
 color: white;
 margin-top: 10px;
+margin-bottom: 10px;
 }
-.top-bar button, p{
+.top-bar button{
     background-color: black;
     color: white;
 }
 
 .top-bar p{
     float: right;
+
+    background-color: black;
+
 }
+
+/* Inner Container Styles */
+
+.inner-div {
+    background-color: darkblue;
+    height: 100%;
+    width: 50%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.inner-div h1{
+    align-content: center;
+}
+
+/* Header/ Intro Styles*/
+
+/* Main Quiz Content Styles*/
