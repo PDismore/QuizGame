@@ -4,48 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUIZGAMES</title>
     <link rel="stylesheet" href="./assets/styles.css">
+    <title>QUIZGAMES</title>
 </head>
 <body>
     <!-- Oustide Edge Div -->
     <div class="outer-div">
-<!-- Top bar -->
+        <!-- Top bar -->
         <div class="top-bar">
             <button>View Highscores</button>
             <p class="">Time Remaining:</p>
         </div>
-<!-- Inner div -->
+        <!-- Inner div -->
         <div class="inner-div">
             <header class="quiz-intro">
                 <h1>Welcome to QuizGames!</h1>
                 <p>To get started please click Start Quiz!</p>
-                <button>Start Quiz!</button>
+                <button id="start-button">Start Quiz!</button>
             </header>
-
+            
             <!-- Quiz Content -->
             <main>
                 <section class="question-window">
                     <h2>Question</h2>
                     <Ul>
+                        <!-- Replaced by JS -->
                         <li><button>Answer 1</button></li>
                         <li><button>Answer 2</button></li>
                         <li><button>Answer 3</button></li>
                         <li><button>Answer 4</button></li>
                     </Ul>
-
+                    
                 </section>
                 <!-- End of Quiz/ highscores -->
                 <section class="quiz-end-window">
-
+                    <h2>Fin</h2>
+                    <p>Your score is </p>
+                    <div>
+                        <label for="">Enter Initials</label>
+                        <input type="text">
+                        <button>Submit</button>
+                    </div>
                 </section>
-
-
-
+                
+                <section class="highscores-window">
+                    <h2>Highscores</h2>
+                    <ol>
+                        <!-- Replaced by JS -->
+                        <li>PD - 25</li>
+                        <li>PD - 25</li>
+                        <li>PD - 25</li>
+                    </ol>
+                    <button>Go Back </button>
+                    <button>Clear Highscores</button>
+                    
+                </section>
+                
+                
+                
             </main>
         </div>
-
+        
     </div>>
     
 </body>
+<script src="./assets/script.js"></script>
 </html>
