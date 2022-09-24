@@ -9,10 +9,10 @@ startButton.addEventListener('click', startGame);
 
 function startGame(){
 
-    console.log('started');
     startWindow.classList.add('hide');
     quizContents, questionContainer.classList.add('show');
     console.log(questionContainer)
+    console.log('started');
 
 
 }
