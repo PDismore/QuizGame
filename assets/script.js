@@ -86,6 +86,7 @@ function selectAnswer(event){
     }else{
         questionContainer.classList.add('hide');
         highScoresPage.classList.remove('hide');
+        timer
 
     };
     
