@@ -90,6 +90,10 @@ main {
     background-color: rgb(229, 233, 233);
 }
 
+.btn-grid{
+    display: grid;
+}
+
 /* End Window */
 .quiz-end-window{
     display: block;
