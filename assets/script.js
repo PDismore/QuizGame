@@ -1,20 +1,27 @@
 const startButton = document.getElementById('start-button');
+const highscoreButton = document.getElementById('view-highscores');
+const backButton = document.getElementById('back-button')
 const startWindow = document.getElementById('start-window');
 const nextQuestion = document.getElementById('answer-buttons')
 const quizContents = document.getElementById('quiz-content');
 const questionContainer = document.getElementById('question-window');
 const currentScore = document.getElementById('score');
-const highScores = document.getElementById('highscores-window');
+const highScoresPage = document.getElementById('highscores-window');
 const questionElement = document.getElementById('question');
 const answerElement = document.getElementById('answer-buttons');
 // variables to allow randomization of question
 let shuffledQuestions, currentQuestionIndex
 var score = 0;
 
-
 // Start button event listeners 
 startButton.addEventListener('click', startGame);
 startButton.addEventListener('click', startTimer);
+
+// Highscore window button event listener
+highscoreButton.addEventListener('click', showScores);
+
+// Go back evenet listener 
+backButton.addEventListener('click', backBtn);
 
 // Next question after selecting answer
 nextQuestion.addEventListener('click',()=>{
@@ -33,7 +40,6 @@ function startGame(){
     setNextQuestion()
     
 };
-
 
 //brings up the next question randomly from the array of questions
 function setNextQuestion (){
@@ -79,7 +85,7 @@ function selectAnswer(event){
 
     }else{
         questionContainer.classList.add('hide');
-        highScores.classList.remove('hide');
+        highScoresPage.classList.remove('hide');
 
     };
     
@@ -87,6 +93,21 @@ function selectAnswer(event){
     console.log(score);
 };
 
+// Brings user to highscores page
+function showScores(){
+    startWindow.classList.add('hide');
+    quizContents.classList.remove('hide');
+    questionContainer.classList.add('hide');
+    highScoresPage.classList.remove('hide');
+};
+
+// Brings user to the start window
+function backBtn(){
+    startWindow.classList.remove('hide');
+    quizContents.classList.add('hide');
+    questionContainer.classList.remove('hide');
+    highScoresPage.classList.add('hide');
+};
 
 // Timer
 function startTimer(){
