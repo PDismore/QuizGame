@@ -2,39 +2,60 @@ var startButton = document.getElementById('start-button');
 var startWindow = document.getElementById('start-window');
 var quizContents = document.getElementById('quiz-content');
 var questionContainer = document.getElementById('question-window');
-var questions = [
+var questionArray = [
+    
     {
         question: "Example question",
-        answers: {
-            a: 'ex1',
-            b: 'ex2',
-        },
-        correctAnswer: 'b'
+        answers: ['A', 'B', 'C', 'D'],
+        correctAnswer: 1
     },
+
+
     {
         question: "Example question",
-        answers: {
-            a: 'ex1',
-            b: 'ex2',
-        },
-        correctAnswer: 'a'
+        answers: ['A', 'b', 'c', 'd'],
+        correctAnswer: 0
     }
+
 ];
+
 
 startButton.addEventListener('click', startGame);
 
-
-
+// hides the start window and shows the quiz window
 function startGame(){
 
+
     startWindow.classList.add('hide');
-    quizContents, questionContainer.classList.remove('hide');
-    console.log(questionContainer);
+    quizContents.classList.remove('hide');
     console.log('started');
+    // Function that will cycle through the questions in questionArray variable
+    function showQuestions(q){
+
+        var titleDiv = document.getElementById('title');
+        titleDiv.textContent= q[0].question;
+
+        var ans = document.querySelectorAll('.answers');
+        console.log(ans);
+        console.log(q);
+        ans.forEach(function(element, index){
+            element.textContent = q[1].answers[index];
+            element.addEventListener('click', function(){
+                if(q[q.length-1].correctAnswer==index){
+                    console.log('correct answer');
+                } else{
+                    console.log('wrong answer');
+                }
+            });
+        });
+
+    }
+    showQuestions(questionArray);
+
 
 
 };
-
+console.log(questionArray);
 // Attempt 2 functions
 
 // function startQuiz(questions, quizContents, resultsContainer, submitButton){
