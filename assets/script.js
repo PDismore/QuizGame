@@ -3,8 +3,11 @@ var startWindow = document.getElementById('start-window');
 var quizContents = document.getElementById('quiz-content');
 var questionContainer = document.getElementById('question-window');
 const currentScore = document.getElementById('score');
+const nextBtn = document.getElementById('next')
 var currentQuestion = 0;
 var score = 0;
+
+nextBtn.addEventListener("click", next)
 var questionArray = [
     
     {
@@ -23,14 +26,24 @@ var questionArray = [
 ];
 
 
+
+
 startButton.addEventListener('click', startGame);
 
 // hides the start window and shows the quiz window
 function startGame(){
-
+    var timeLeft = 60;
+    var timer = setInterval(function(){
+        timeLeft--;
+        document.getElementById("count").textContent= timeLeft
+        if(timeLeft <=0)
+            clearInterval(timer);
+    },1000);
     startWindow.classList.add('hide');
     quizContents.classList.remove('hide');
     console.log('started');
+
+
 
     currentQuestion =0;
 
@@ -42,7 +55,7 @@ function startGame(){
         var titleDiv = document.getElementById('title');
         titleDiv.textContent= q[0].question;
         
-        // shows the answers for the question
+        // shows the answers for the question from array
         var ans = document.querySelectorAll('.answers');
         // console.log(ans);
         console.log(q);
@@ -60,9 +73,8 @@ function startGame(){
                     console.log(score);
                     currentScore.innerHTML= score;
                 }
-            });
-            // var scoreCount = document.getElementById('score')
-            // scoreCount.textContent=score;
+            }
+            );
         });
     }
     showQuestions(questionArray);
@@ -71,52 +83,7 @@ function startGame(){
 
 };
 console.log(score);
-// Attempt 2 functions
 
-
-    // function showQuestions(questions, quizContents){
-    //     var output = [];
-    //     var answers;
-    //     console.log(answers);
-    //     for(var i=0; i<questions.length; i++){
-    //         answers = [];
-    //         for(letter in questions[i].answers){
-    //             answers.push(
-    //                 '<label>'
-    //                 + '<input type="radio" name="question'+i+'"value="'+letter+'">'
-    //                 + letter + ': '
-    //                 + questions[i].answers[letter]
-    //                 + '</label>'
-    //             );
-    //         }
-    //         output.push(
-    //             '<div class="question">'+questions[i].question+'</div>'
-    //             +'<div class="answers">'+answers.join('')+'</div>'
-    //         );
-    //     }
-    //     // quizContainer.innerHtml= output.join('');
-    // }
-    // showQuestions(questionArray);
-    // function showResults(questions, quizContents, resultsContainer){
-    //     var answers = quizContents.querySelectorAll('.answers');
-    //     var userAnswer = '';
-    //     var numCorrect = 0;
-
-    //     for(var i=0; i<questions.length; i++){
-    //         userAnswer=(answers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
-    //         if(answers===questions[i].correctAnswer){
-    //             numCorrect++;
-    //             answers[i].style.color='lightgreen';
-    //         }
-    //         else{
-    //             answers[i].style.color='red';
-    //         }
-    //     }
-    //     resultsContainer.innerHtml = numCorrect+'out of ' +questions.length;
-    // };
-//    submitButton.onclick= function(){
-//     showResults(questions);
-//    }
 
 
 
