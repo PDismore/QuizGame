@@ -41,6 +41,7 @@ margin-bottom: 10px;
 .top-bar button{
     background-color: rgb(105, 105, 105);
     color: white;
+    cursor: pointer;
 }
 
 .top-bar p{
@@ -87,13 +88,27 @@ main {
 /* Question Window*/
 .question-window{
     display: block;
-    background-color: rgb(229, 233, 233);
+    background-color: rgb(105, 105, 105);
 }
 
 .btn-grid{
     display: grid;
+    gap: 10px;
+    margin: 20px 0;
+    background-color: rgb(105, 105, 105);
 }
 
+.btn{
+    background-color: rgb(66, 214, 29);
+    color: deepskyblue;
+     
+}
+.btn:hover{
+    background-color: rgb(219, 223, 219);
+    color: deepskyblue;
+    cursor: pointer;
+     
+}
 /* End Window */
 .quiz-end-window{
     display: block;
